@@ -1,2 +1,1 @@
-# Vocabularies
-# Container for ontologies, thesauri, etc.
+Vocabularies: container for ontologies, thesauri, etc.
