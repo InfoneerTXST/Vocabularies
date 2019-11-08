@@ -1,0 +1,763 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/fameri/ontologies/2018/4/untitled-ontology-195#"
+     xml:base="http://www.semanticweb.org/fameri/ontologies/2018/4/untitled-ontology-195"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:CommonCoreOntologies="http://www.ontologyrepository.com/CommonCoreOntologies/"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://infoneer.txstate.edu/IOF/SC">
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/bfo/classes-only.owl"/>
+        <owl:imports rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/Mid/AllCoreOntology"/>
+        <owl:imports rdf:resource="http://www.obofoundry.org/ro/ro.owl"/>
+        <rdfs:comment>This ontology is designed in the contect of IOF Supply Chain WG activities</rdfs:comment>
+        <dc:contributor>Farhad Ameri</dc:contributor>
+        <rdfs:label>Supply Chain Reference Ontology</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/source -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/source"/>
+    
+
+
+    <!-- http://www.ontologyrepository.com/CommonCoreOntologies/definition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+    
+
+
+    <!-- http://www.ontologyrepository.com/CommonCoreOntologies/is_curated_in_ontology -->
+
+    <owl:AnnotationProperty rdf:about="http://www.ontologyrepository.com/CommonCoreOntologies/is_curated_in_ontology"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ontologyrepository.com/CommonCoreOntologies/bearer_of -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologyrepository.com/CommonCoreOntologies/bearer_of"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://infoneer.txstate.edu/IOF/SC/Act -->
+
+    <owl:Class rdf:about="http://infoneer.txstate.edu/IOF/SC/Act">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <CommonCoreOntologies:definition>A Process in which at least one Agent plays a causative role.</CommonCoreOntologies:definition>
+        <rdfs:label>act</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://infoneer.txstate.edu/IOF/SC/ActOfShipping -->
+
+    <owl:Class rdf:about="http://infoneer.txstate.edu/IOF/SC/ActOfShipping">
+        <rdfs:subClassOf rdf:resource="http://infoneer.txstate.edu/IOF/SC/ActofLocationChange"/>
+        <rdfs:label>act of shipping</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://infoneer.txstate.edu/IOF/SC/ActOfTransportation -->
+
+    <owl:Class rdf:about="http://infoneer.txstate.edu/IOF/SC/ActOfTransportation">
+        <rdfs:subClassOf rdf:resource="http://infoneer.txstate.edu/IOF/SC/ActofLocationChange"/>
+        <rdfs:label>act of transportation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://infoneer.txstate.edu/IOF/SC/ActofAppraisal -->
+
+    <owl:Class rdf:about="http://infoneer.txstate.edu/IOF/SC/ActofAppraisal">
+        <rdfs:subClassOf rdf:resource="http://infoneer.txstate.edu/IOF/SC/IntentionalAct"/>
+        <CommonCoreOntologies:definition>An Intentional Act that involves evaluating, estimating, or judging the nature, value, importance, condition, or quality of something or someone.</CommonCoreOntologies:definition>
+        <CommonCoreOntologies:is_curated_in_ontology>http://www.ontologyrepository.com/CommonCoreOntologies/Mid/EventOntology</CommonCoreOntologies:is_curated_in_ontology>
+        <rdfs:label>act of appraisal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://infoneer.txstate.edu/IOF/SC/ActofCargoTransportation -->
+
+    <owl:Class rdf:about="http://infoneer.txstate.edu/IOF/SC/ActofCargoTransportation">
+        <rdfs:subClassOf rdf:resource="http://infoneer.txstate.edu/IOF/SC/ActOfTransportation"/>
+        <CommonCoreOntologies:definition>An Act of Location Change involving the movement of manufactured goods through some Transportation Agent.</CommonCoreOntologies:definition>
+        <rdfs:label>act of cargo transportation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://infoneer.txstate.edu/IOF/SC/ActofLocationChange -->
+
+    <owl:Class rdf:about="http://infoneer.txstate.edu/IOF/SC/ActofLocationChange">
+        <rdfs:subClassOf rdf:resource="http://infoneer.txstate.edu/IOF/SC/ActofMotion"/>
+        <CommonCoreOntologies:definition>An Act of Motion in which the location of some Object is changed by some Agent.</CommonCoreOntologies:definition>
+        <rdfs:label>act of location change</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://infoneer.txstate.edu/IOF/SC/ActofMotion -->
+
+    <owl:Class rdf:about="http://infoneer.txstate.edu/IOF/SC/ActofMotion">
+        <rdfs:subClassOf rdf:resource="http://infoneer.txstate.edu/IOF/SC/IntentionalAct"/>
+        <CommonCoreOntologies:definition>An Intentional Act by which an Agent causes the position or location of some Object to change.</CommonCoreOntologies:definition>
+        <rdfs:label>act of motion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://infoneer.txstate.edu/IOF/SC/ActofPositionChange -->
+
+    <owl:Class rdf:about="http://infoneer.txstate.edu/IOF/SC/ActofPositionChange">
+        <rdfs:subClassOf rdf:resource="http://infoneer.txstate.edu/IOF/SC/ActofMotion"/>
+        <CommonCoreOntologies:definition>An Act of Motion in which the position (i.e. the orientation, alignment, or arrangement) of some Object or of one or more of an Object&apos;s parts is changed by some Agent.</CommonCoreOntologies:definition>
+        <rdfs:comment>An Act of Position Change does not entail a change of location.</rdfs:comment>
+        <rdfs:label>act of position change</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://infoneer.txstate.edu/IOF/SC/ActofSupplierEvaluation -->
+
+    <owl:Class rdf:about="http://infoneer.txstate.edu/IOF/SC/ActofSupplierEvaluation">
+        <rdfs:subClassOf rdf:resource="http://infoneer.txstate.edu/IOF/SC/ActofAppraisal"/>
+        <rdfs:label>act of supplier evaluation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://infoneer.txstate.edu/IOF/SC/Agent -->
+
+    <owl:Class rdf:about="http://infoneer.txstate.edu/IOF/SC/Agent">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
+        <dc:source>Common Core Ontology</dc:source>
+        <CommonCoreOntologies:definition>An Independent Continuant that is capable of performing Intentional Acts.</CommonCoreOntologies:definition>
+        <rdfs:label>agent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://infoneer.txstate.edu/IOF/SC/AssemblyServiceProviderRole -->
+
+    <owl:Class rdf:about="http://infoneer.txstate.edu/IOF/SC/AssemblyServiceProviderRole">
+        <rdfs:subClassOf rdf:resource="http://infoneer.txstate.edu/IOF/SC/ServiceProviderRole"/>
+        <CommonCoreOntologies:definition>A Service Provider Role that is borne by an Agent to provide an Assembly Service to some Agents in some Supply Chain.</CommonCoreOntologies:definition>
+        <rdfs:label>assembly service provider role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://infoneer.txstate.edu/IOF/SC/Batch -->
+
+    <owl:Class rdf:about="http://infoneer.txstate.edu/IOF/SC/Batch">
+        <rdfs:subClassOf rdf:resource="http://infoneer.txstate.edu/IOF/SC/TraceableResourceUnit"/>
+        <CommonCoreOntologies:definition>A Traceable Resource Unit that is the output of a batch process</CommonCoreOntologies:definition>
+        <rdfs:label>batch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://infoneer.txstate.edu/IOF/SC/CastingServiceProviderRole -->
+
+    <owl:Class rdf:about="http://infoneer.txstate.edu/IOF/SC/CastingServiceProviderRole">
+        <rdfs:subClassOf rdf:resource="http://infoneer.txstate.edu/IOF/SC/ManufacturingServiceProviderRole"/>
+        <CommonCoreOntologies:definition>A Manufacturing Service Provider Role that is borne by an Agent to provide a Casting Service to some Agents in some Supply Chain.</CommonCoreOntologies:definition>
+        <rdfs:label>casting service provider role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://infoneer.txstate.edu/IOF/SC/CastingSupplier -->
+
+    <owl:Class rdf:about="http://infoneer.txstate.edu/IOF/SC/CastingSupplier">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://infoneer.txstate.edu/IOF/SC/ManufacturingSupplier"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/bearer_of"/>
+                        <owl:someValuesFrom rdf:resource="http://infoneer.txstate.edu/IOF/SC/CastingServiceProviderRole"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://infoneer.txstate.edu/IOF/SC/ManufacturingSupplier"/>
+        <CommonCoreOntologies:definition>A Manufacturing Supplier that bears a Casting Service Provider Role.</CommonCoreOntologies:definition>
+        <rdfs:label>casting supplier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://infoneer.txstate.edu/IOF/SC/ComponentProviderRole -->
+
+    <owl:Class rdf:about="http://infoneer.txstate.edu/IOF/SC/ComponentProviderRole">
+        <rdfs:subClassOf rdf:resource="http://infoneer.txstate.edu/IOF/SC/MaterialProviderRole"/>
+        <rdfs:label>component provider role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://infoneer.txstate.edu/IOF/SC/Customer -->
+
+    <owl:Class rdf:about="http://infoneer.txstate.edu/IOF/SC/Customer">
+        <rdfs:subClassOf rdf:resource="http://infoneer.txstate.edu/IOF/SC/Agent"/>
+        <CommonCoreOntologies:definition>An Agent that bears a Customer Role.</CommonCoreOntologies:definition>
+        <rdfs:label>customer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://infoneer.txstate.edu/IOF/SC/CustomerRole -->
+
+    <owl:Class rdf:about="http://infoneer.txstate.edu/IOF/SC/CustomerRole">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+        <CommonCoreOntologies:definition>A Role that is borne by an Agent to buy or consume a Product or Service.</CommonCoreOntologies:definition>
+        <rdfs:label>customer role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://infoneer.txstate.edu/IOF/SC/EngineeredSystem -->
+
+    <owl:Class rdf:about="http://infoneer.txstate.edu/IOF/SC/EngineeredSystem">
+        <rdfs:subClassOf rdf:resource="http://infoneer.txstate.edu/IOF/SC/System"/>
+        <rdfs:label>engineered system</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://infoneer.txstate.edu/IOF/SC/Facility -->
+
+    <owl:Class rdf:about="http://infoneer.txstate.edu/IOF/SC/Facility">
+        <rdfs:subClassOf rdf:resource="http://infoneer.txstate.edu/IOF/SC/MaterialArtifact"/>
+        <CommonCoreOntologies:definition>An Artifact that is designed as a building or campus dedicated to some specific purpose.</CommonCoreOntologies:definition>
+        <rdfs:label>facility</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://infoneer.txstate.edu/IOF/SC/Factory -->
+
+    <owl:Class rdf:about="http://infoneer.txstate.edu/IOF/SC/Factory">
+        <rdfs:subClassOf rdf:resource="http://infoneer.txstate.edu/IOF/SC/Facility"/>
+        <CommonCoreOntologies:definition>A Facility that is designed for manufacturing or refining discrete or continuous material products.</CommonCoreOntologies:definition>
+        <rdfs:label>factory</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://infoneer.txstate.edu/IOF/SC/ForgingServiceProviderRole -->
+
+    <owl:Class rdf:about="http://infoneer.txstate.edu/IOF/SC/ForgingServiceProviderRole">
+        <rdfs:subClassOf rdf:resource="http://infoneer.txstate.edu/IOF/SC/ManufacturingServiceProviderRole"/>
+        <CommonCoreOntologies:definition>A Manufacturing Service Provider Role that is borne by an Agent to provide a Forging Service to some Agents in some Supply Chain.</CommonCoreOntologies:definition>
+        <rdfs:label>forging service provider role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://infoneer.txstate.edu/IOF/SC/ForgingSupplier -->
+
+    <owl:Class rdf:about="http://infoneer.txstate.edu/IOF/SC/ForgingSupplier">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://infoneer.txstate.edu/IOF/SC/ManufacturingSupplier"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/bearer_of"/>
+                        <owl:someValuesFrom rdf:resource="http://infoneer.txstate.edu/IOF/SC/ForgingServiceProviderRole"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://infoneer.txstate.edu/IOF/SC/ManufacturingSupplier"/>
+        <CommonCoreOntologies:definition>A Manufacturing Supplier that bears a Forging Service Provider Role.</CommonCoreOntologies:definition>
+        <rdfs:label>forging supplier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://infoneer.txstate.edu/IOF/SC/GroupOfAgents -->
+
+    <owl:Class rdf:about="http://infoneer.txstate.edu/IOF/SC/GroupOfAgents">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000027"/>
+        <rdfs:label>group of agents</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://infoneer.txstate.edu/IOF/SC/IntentionalAct -->
+
+    <owl:Class rdf:about="http://infoneer.txstate.edu/IOF/SC/IntentionalAct">
+        <rdfs:subClassOf rdf:resource="http://infoneer.txstate.edu/IOF/SC/Act"/>
+        <CommonCoreOntologies:definition>An Act in which at least one Agent plays a causative role and which is prescribed by some Directive Information Content Entity held by at least one of the Agents.</CommonCoreOntologies:definition>
+        <rdfs:label>intentional act</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://infoneer.txstate.edu/IOF/SC/Inventory -->
+
+    <owl:Class rdf:about="http://infoneer.txstate.edu/IOF/SC/Inventory">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000027"/>
+        <rdfs:label>inventory</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://infoneer.txstate.edu/IOF/SC/Load -->
+
+    <owl:Class rdf:about="http://infoneer.txstate.edu/IOF/SC/Load">
+        <rdfs:subClassOf rdf:resource="http://infoneer.txstate.edu/IOF/SC/TraceableResourceUnit"/>
+        <CommonCoreOntologies:definition>A TRU that shares the same transportation and transfer history</CommonCoreOntologies:definition>
+        <rdfs:comment>Collection of material transported or transferred together.</rdfs:comment>
+        <rdfs:label>load</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://infoneer.txstate.edu/IOF/SC/LogisticUnit -->
+
+    <owl:Class rdf:about="http://infoneer.txstate.edu/IOF/SC/LogisticUnit">
+        <rdfs:subClassOf rdf:resource="http://infoneer.txstate.edu/IOF/SC/TraceableResourceUnit"/>
+        <rdfs:label>logistic unit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://infoneer.txstate.edu/IOF/SC/Lot -->
+
+    <owl:Class rdf:about="http://infoneer.txstate.edu/IOF/SC/Lot">
+        <rdfs:subClassOf rdf:resource="http://infoneer.txstate.edu/IOF/SC/TraceableResourceUnit"/>
+        <rdfs:comment>Collection of material, tracked as a unit, that is produced together such that it shares characteristics (e.g. dye lot).</rdfs:comment>
+        <rdfs:label>lot</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://infoneer.txstate.edu/IOF/SC/MachiningServiceProviderRole -->
+
+    <owl:Class rdf:about="http://infoneer.txstate.edu/IOF/SC/MachiningServiceProviderRole">
+        <rdfs:subClassOf rdf:resource="http://infoneer.txstate.edu/IOF/SC/ManufacturingServiceProviderRole"/>
+        <CommonCoreOntologies:definition>A Manufacturing Service Role that is borne by an Agent to provide a Machining Service to some Agents in some Supply Chain.</CommonCoreOntologies:definition>
+        <rdfs:label>machining service provider role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://infoneer.txstate.edu/IOF/SC/MachiningSupplier -->
+
+    <owl:Class rdf:about="http://infoneer.txstate.edu/IOF/SC/MachiningSupplier">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://infoneer.txstate.edu/IOF/SC/ManufacturingSupplier"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/bearer_of"/>
+                        <owl:someValuesFrom rdf:resource="http://infoneer.txstate.edu/IOF/SC/MachiningServiceProviderRole"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://infoneer.txstate.edu/IOF/SC/ManufacturingSupplier"/>
+        <obo:IAO_0000115>A Supplier that bears a Machining Service Provider Role.</obo:IAO_0000115>
+        <rdfs:label>machining supplier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://infoneer.txstate.edu/IOF/SC/ManufacturingEnterprise -->
+
+    <owl:Class rdf:about="http://infoneer.txstate.edu/IOF/SC/ManufacturingEnterprise">
+        <rdfs:subClassOf rdf:resource="http://infoneer.txstate.edu/IOF/SC/Organization"/>
+        <CommonCoreOntologies:definition>An Organization whose function is to engage in Manufacturing Enterprise Processes.</CommonCoreOntologies:definition>
+        <rdfs:label>manufacturing enterprise</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://infoneer.txstate.edu/IOF/SC/ManufacturingServiceProviderRole -->
+
+    <owl:Class rdf:about="http://infoneer.txstate.edu/IOF/SC/ManufacturingServiceProviderRole">
+        <rdfs:subClassOf rdf:resource="http://infoneer.txstate.edu/IOF/SC/ServiceProviderRole"/>
+        <CommonCoreOntologies:definition>A Service Provider Role that is borne by an Agent to provide a Manufacturing Service to some Agents in some Supply Chain.</CommonCoreOntologies:definition>
+        <rdfs:label>manufacturing service provider role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://infoneer.txstate.edu/IOF/SC/ManufacturingSupplier -->
+
+    <owl:Class rdf:about="http://infoneer.txstate.edu/IOF/SC/ManufacturingSupplier">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://infoneer.txstate.edu/IOF/SC/Supplier"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/bearer_of"/>
+                        <owl:someValuesFrom rdf:resource="http://infoneer.txstate.edu/IOF/SC/ManufacturingServiceProviderRole"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://infoneer.txstate.edu/IOF/SC/Supplier"/>
+        <obo:IAO_0000115>A Supplier that bears a Manufacturing Service Provider Role.</obo:IAO_0000115>
+        <rdfs:label>manufacturing supplier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://infoneer.txstate.edu/IOF/SC/MaterialArtifact -->
+
+    <owl:Class rdf:about="http://infoneer.txstate.edu/IOF/SC/MaterialArtifact">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+        <CommonCoreOntologies:definition>An Object that was designed by some Agent to realize a certain Function.</CommonCoreOntologies:definition>
+        <rdfs:comment>In CCO this class is called Artifact</rdfs:comment>
+        <rdfs:label>material artifact</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://infoneer.txstate.edu/IOF/SC/MaterialProviderRole -->
+
+    <owl:Class rdf:about="http://infoneer.txstate.edu/IOF/SC/MaterialProviderRole">
+        <rdfs:subClassOf rdf:resource="http://infoneer.txstate.edu/IOF/SC/SupplierRole"/>
+        <CommonCoreOntologies:definition>A Supplier Role that is borne by an Agent to sell Product, Component, or Raw Material to some Agents in some Supply Chain.</CommonCoreOntologies:definition>
+        <rdfs:label>material provider role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://infoneer.txstate.edu/IOF/SC/Organization -->
+
+    <owl:Class rdf:about="http://infoneer.txstate.edu/IOF/SC/Organization">
+        <rdfs:subClassOf rdf:resource="http://infoneer.txstate.edu/IOF/SC/GroupOfAgents"/>
+        <CommonCoreOntologies:definition>A Group of Agents which can be the bearer of roles, has members, and has a set of organization rules.</CommonCoreOntologies:definition>
+        <rdfs:comment>Members of organizations are either Organizations themselves or individual Persons. Members can bear specific Organization Member Roles that are determined in the organization rules. The organization rules also determine how decisions are made on behalf of the Organization by the organization members.</rdfs:comment>
+        <rdfs:label>organization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://infoneer.txstate.edu/IOF/SC/Person -->
+
+    <owl:Class rdf:about="http://infoneer.txstate.edu/IOF/SC/Person">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+        <CommonCoreOntologies:definition>An Agent that is a human being</CommonCoreOntologies:definition>
+        <rdfs:label>person</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://infoneer.txstate.edu/IOF/SC/PlannedProcess -->
+
+    <owl:Class rdf:about="http://infoneer.txstate.edu/IOF/SC/PlannedProcess">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <rdfs:label>planned process</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://infoneer.txstate.edu/IOF/SC/ProductManfacturerRole -->
+
+    <owl:Class rdf:about="http://infoneer.txstate.edu/IOF/SC/ProductManfacturerRole">
+        <rdfs:subClassOf rdf:resource="http://infoneer.txstate.edu/IOF/SC/MaterialProviderRole"/>
+        <CommonCoreOntologies:definition>A Supplier Role that is borne by an Agent to sell some Products to the Agents in some Supply Chain.</CommonCoreOntologies:definition>
+        <rdfs:label>product manufacturer role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://infoneer.txstate.edu/IOF/SC/ProductProductionProcess -->
+
+    <owl:Class rdf:about="http://infoneer.txstate.edu/IOF/SC/ProductProductionProcess">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/ProcessAggregate"/>
+        <CommonCoreOntologies:definition>planned process that has specified output some product, where the product did not exist at the point of initiation of the planned process.</CommonCoreOntologies:definition>
+        <rdfs:comment>A Process Aggregate comprising all planned processes involved in creating a product (including manufacturing, inspection, and transportation).</rdfs:comment>
+        <rdfs:label>product production process</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://infoneer.txstate.edu/IOF/SC/RawMaterialProviderRole -->
+
+    <owl:Class rdf:about="http://infoneer.txstate.edu/IOF/SC/RawMaterialProviderRole">
+        <rdfs:subClassOf rdf:resource="http://infoneer.txstate.edu/IOF/SC/MaterialProviderRole"/>
+        <CommonCoreOntologies:definition>A Supplier Role that is borne by an Agent to sell some Raw Material to some Agents in some Supply Chain.</CommonCoreOntologies:definition>
+        <rdfs:label>raw material provider role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://infoneer.txstate.edu/IOF/SC/ServiceProviderRole -->
+
+    <owl:Class rdf:about="http://infoneer.txstate.edu/IOF/SC/ServiceProviderRole">
+        <rdfs:subClassOf rdf:resource="http://infoneer.txstate.edu/IOF/SC/SupplierRole"/>
+        <CommonCoreOntologies:definition>A Supplier Role that is borne by an Agent to provide a Service to some Agents in some Supply Chain.</CommonCoreOntologies:definition>
+        <rdfs:label>service provider role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://infoneer.txstate.edu/IOF/SC/Shipment -->
+
+    <owl:Class rdf:about="http://infoneer.txstate.edu/IOF/SC/Shipment">
+        <rdfs:subClassOf rdf:resource="http://infoneer.txstate.edu/IOF/SC/TraceableResourceUnit"/>
+        <rdfs:label>shipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://infoneer.txstate.edu/IOF/SC/Supplier -->
+
+    <owl:Class rdf:about="http://infoneer.txstate.edu/IOF/SC/Supplier">
+        <rdfs:subClassOf rdf:resource="http://infoneer.txstate.edu/IOF/SC/Agent"/>
+        <obo:IAO_0000115>An Agent that bears a Supplier Role.</obo:IAO_0000115>
+        <rdfs:label>supplier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://infoneer.txstate.edu/IOF/SC/SupplierRole -->
+
+    <owl:Class rdf:about="http://infoneer.txstate.edu/IOF/SC/SupplierRole">
+        <rdfs:subClassOf rdf:resource="http://infoneer.txstate.edu/IOF/SC/SupplyChainRole"/>
+        <CommonCoreOntologies:definition>A Role that is borne by an Agent to sell or provide a Product or Service to other Agent in some Supply Chain.</CommonCoreOntologies:definition>
+        <rdfs:label>supplier role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://infoneer.txstate.edu/IOF/SC/SupplyChain -->
+
+    <owl:Class rdf:about="http://infoneer.txstate.edu/IOF/SC/SupplyChain">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/GroupOfOrganizations"/>
+        <obo:IAO_0000115>a Group of Organizations that participate in some processes that are occurrents parts of a product production process.</obo:IAO_0000115>
+        <rdfs:comment>A supply chain link = def.2   a relationship between two Agents (a1 and a2) if a1 and a2 participate in a process that is an occurrent part of a product production process.</rdfs:comment>
+        <rdfs:label>supply chain</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://infoneer.txstate.edu/IOF/SC/SupplyChainRole -->
+
+    <owl:Class rdf:about="http://infoneer.txstate.edu/IOF/SC/SupplyChainRole">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+        <CommonCoreOntologies:definition>A Role that inheres in an Agent in virtue of the responsibilities that Agent is expected to fulfill as a member of some Supply Chain.</CommonCoreOntologies:definition>
+        <rdfs:label>supply chain role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://infoneer.txstate.edu/IOF/SC/SupplyChainSystem -->
+
+    <owl:Class rdf:about="http://infoneer.txstate.edu/IOF/SC/SupplyChainSystem">
+        <rdfs:subClassOf rdf:resource="http://infoneer.txstate.edu/IOF/SC/EngineeredSystem"/>
+        <CommonCoreOntologies:definition>An Engineered System comprising all agents, equipment, facilities, software systems, and other systems governed by a set of rules, created with the intention of delivering a product or a service.</CommonCoreOntologies:definition>
+        <rdfs:label>supply chain system</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://infoneer.txstate.edu/IOF/SC/System -->
+
+    <owl:Class rdf:about="http://infoneer.txstate.edu/IOF/SC/System">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000027"/>
+        <CommonCoreOntologies:definition>object aggregate whose member parts are causally integrated.</CommonCoreOntologies:definition>
+        <rdfs:label>system</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://infoneer.txstate.edu/IOF/SC/TestServiceProviderRole -->
+
+    <owl:Class rdf:about="http://infoneer.txstate.edu/IOF/SC/TestServiceProviderRole">
+        <rdfs:subClassOf rdf:resource="http://infoneer.txstate.edu/IOF/SC/ServiceProviderRole"/>
+        <CommonCoreOntologies:definition>A Supplier Role that is borne by an Agent to provide a Test Service to some Agents in some Supply Chain.</CommonCoreOntologies:definition>
+        <rdfs:label>test service provider role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://infoneer.txstate.edu/IOF/SC/Tool -->
+
+    <owl:Class rdf:about="http://infoneer.txstate.edu/IOF/SC/Tool">
+        <rdfs:subClassOf rdf:resource="http://infoneer.txstate.edu/IOF/SC/MaterialArtifact"/>
+        <rdfs:comment>CCO definition: An Artifact that is designed to assist in the performance of manual or mechanical work and not to be consumed in that process.</rdfs:comment>
+        <rdfs:label>tool</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://infoneer.txstate.edu/IOF/SC/TraceableResourceUnit -->
+
+    <owl:Class rdf:about="http://infoneer.txstate.edu/IOF/SC/TraceableResourceUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <CommonCoreOntologies:definition>Portion of Material or Object Aggregate whose members share some History for which some Agent may have a need to retrieve information</CommonCoreOntologies:definition>
+        <rdfs:label>traceable resource unit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://infoneer.txstate.edu/IOF/SC/TransportationServiceProviderRole -->
+
+    <owl:Class rdf:about="http://infoneer.txstate.edu/IOF/SC/TransportationServiceProviderRole">
+        <rdfs:subClassOf rdf:resource="http://infoneer.txstate.edu/IOF/SC/ServiceProviderRole"/>
+        <CommonCoreOntologies:definition>A Supplier Role that is borne by an Agent to provide a Transportation Service to some Agents in some Supply Chain.</CommonCoreOntologies:definition>
+        <rdfs:label>transportation service provider role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://infoneer.txstate.edu/ontology/Capability -->
+
+    <owl:Class rdf:about="http://infoneer.txstate.edu/ontology/Capability">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
+        <rdfs:label>capability</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://infoneer.txstate.edu/ontology/OrganizationProductionCapacity -->
+
+    <owl:Class rdf:about="http://infoneer.txstate.edu/ontology/OrganizationProductionCapacity">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/OrganizationCapability"/>
+        <obo:IAO_0000115>An Organization Capability that inheres in a manufacturing organization to manufacture a certain quantity of a material entity in a particular time period.</obo:IAO_0000115>
+        <rdfs:label>organization production capacity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://infoneer.txstate.edu/ontology/ProductionCapability -->
+
+    <owl:Class rdf:about="http://infoneer.txstate.edu/ontology/ProductionCapability">
+        <rdfs:subClassOf rdf:resource="http://infoneer.txstate.edu/ontology/Capability"/>
+        <rdfs:label>production capability</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://infoneer.txstate.edu/ontology/ProductionCapacity -->
+
+    <owl:Class rdf:about="http://infoneer.txstate.edu/ontology/ProductionCapacity">
+        <rdfs:subClassOf rdf:resource="http://infoneer.txstate.edu/ontology/ProductionCapability"/>
+        <rdfs:label>production capacity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyrepository.com/CommonCoreOntologies/OrganizationCapability -->
+
+    <owl:Class rdf:about="http://www.ontologyrepository.com/CommonCoreOntologies/OrganizationCapability">
+        <rdfs:subClassOf rdf:resource="http://infoneer.txstate.edu/ontology/Capability"/>
+        <rdfs:label>organizarion capability</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://infoneer.txstate.edu/ontology/Company_A -->
+
+    <owl:NamedIndividual rdf:about="http://infoneer.txstate.edu/ontology/Company_A">
+        <CommonCoreOntologies:bearer_of rdf:resource="http://infoneer.txstate.edu/ontology/machining_service_provider_role_A"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://infoneer.txstate.edu/ontology/Company_B -->
+
+    <owl:NamedIndividual rdf:about="http://infoneer.txstate.edu/ontology/Company_B"/>
+    
+
+
+    <!-- http://infoneer.txstate.edu/ontology/machining_service_provider_role_A -->
+
+    <owl:NamedIndividual rdf:about="http://infoneer.txstate.edu/ontology/machining_service_provider_role_A">
+        <rdf:type rdf:resource="http://infoneer.txstate.edu/IOF/SC/MachiningServiceProviderRole"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://infoneer.txstate.edu/IOF/SC/Batch"/>
+            <rdf:Description rdf:about="http://infoneer.txstate.edu/IOF/SC/Load"/>
+            <rdf:Description rdf:about="http://infoneer.txstate.edu/IOF/SC/LogisticUnit"/>
+            <rdf:Description rdf:about="http://infoneer.txstate.edu/IOF/SC/Lot"/>
+            <rdf:Description rdf:about="http://infoneer.txstate.edu/IOF/SC/Shipment"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://infoneer.txstate.edu/IOF/SC/CastingServiceProviderRole"/>
+            <rdf:Description rdf:about="http://infoneer.txstate.edu/IOF/SC/ForgingServiceProviderRole"/>
+            <rdf:Description rdf:about="http://infoneer.txstate.edu/IOF/SC/MachiningServiceProviderRole"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+
